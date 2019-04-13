@@ -1,0 +1,18 @@
+{
+    "name": "promoting/notice",
+    "description": "推广站点公告",
+    "require": {
+        "php": ">=7.0"
+    },
+    "authors": [
+        {
+            "name": "gaozhongqiang",
+            "email": "1225000209@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Promoting\\Notice\\": ""
+        }
+    }
+}
