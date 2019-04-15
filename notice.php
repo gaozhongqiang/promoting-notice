@@ -66,7 +66,7 @@ EOF;
                             }
                             switch ($v1['type']) {
                                 case "image":
-                                    $is_compile_content[$k]['plate_content'][$k1]['value'] = FormatAtlasMarketSizeOne($v1['value']['source_image']);
+                                    $is_compile_content[$k]['plate_content'][$k1]['value'] = self::get_atlas_data($v1['value']['source_image']);
                                     //为图片补充缩放信息
                                     break;
                                 default:
@@ -112,5 +112,45 @@ EOF;
         $style = empty($is_color) ? "" : "style='color: red'";
         $valueText = str_replace("\n\n","",$value);
         return "<p {$style}>".str_replace("\n","</p><p>",$valueText)."</p>";
+    }
+    public static function get_atlas_data($image_source){
+        if(empty($image_source)){
+            return array();
+        }
+        $image_data=@getimagesize(self::get_image_upload_base_path().$image_source);
+        $resultArr=array(
+            "source_image"=>self::get_image_resource_cdn($image_source),
+            "thumb_width"    => $image_data[0],
+            "thumb_height"    => $image_data[1],
+            "pic_show_type" => $image_data[0]>$image_data[1] ? 2 : 1,
+        );
+        return $resultArr;
+    }
+
+    /**
+     * 返回图片上传的基本路径
+     * @return string
+     */
+    public static function get_image_upload_base_path(){
+        return dirname(FCPATH)."/".ReturnImageDomain();
+    }
+
+    /**
+     * 返回图片资源域
+     * @return null|string|string[]
+     */
+    public static function get_image_domain(){
+        return preg_replace("/https?:\/\//i","",ImageResourceDomain);
+    }
+
+    /**
+     * 返回基于图片资源域的路径
+     * @param string $imgPath
+     * @return string
+     */
+    public static function get_image_resource_cdn($imgPath){
+        if(empty($imgPath)) return "";
+        if(preg_match("/^https?/i",$imgPath)) return $imgPath;
+        return ImageResourceDomain.$imgPath;
     }
 }
