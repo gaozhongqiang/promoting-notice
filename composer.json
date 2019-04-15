@@ -1,6 +1,7 @@
 {
     "name": "promoting/notice",
     "description": "推广站点公告",
+    "keywords": [],
     "require": {
         "php": ">=7.0"
     },
@@ -10,7 +11,6 @@
             "email": "1225000209@qq.com"
         }
     ],
-    "version": "1.0.0",
     "autoload": {
         "psr-4": {
             "Promoting\\Notice\\": ""
