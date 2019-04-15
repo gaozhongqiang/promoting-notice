@@ -2,7 +2,7 @@
     "name": "promoting/notice",
     "description": "推广站点公告",
     "require": {
-        "php": ">=7.0"
+        "php": ">=5.4"
     },
     "authors": [
         {
