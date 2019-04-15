@@ -10,6 +10,7 @@
             "email": "1225000209@qq.com"
         }
     ],
+    "version": "1.0.0",
     "autoload": {
         "psr-4": {
             "Promoting\\Notice\\": ""
