@@ -1,7 +1,6 @@
 {
     "name": "promoting/notice",
     "description": "推广站点公告",
-    "keywords": [],
     "require": {
         "php": ">=7.0"
     },
