@@ -1,8 +1,8 @@
 {
     "name": "promoting/notice",
-    "description": "推广站点公告",
+    "description": "推广站点游戏公告详情页",
     "require": {
-        "php": ">=5.4"
+        "php": ">=7.0"
     },
     "authors": [
         {
