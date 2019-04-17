@@ -88,7 +88,7 @@ EOF;
                                     $data .= self::textCrack($value1['value'],1);
                                     break;
                                 case 'image':
-                                    $data .= "<img src='{$value1['value']['source_image']}' class='ht_img' width='300'>";
+                                    $data .= "<div style='text-align: center;margin: 20px'><img src='{$value1['value']['source_image']}' class='ht_img' width='300'></div>";
                             }
                         }
                     }
@@ -99,7 +99,7 @@ EOF;
                 $out_html = '';
                 break;
         }
-        return $out_html;
+        return "<div>{$out_html}</div>";
     }
 
     /**
