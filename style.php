@@ -27,22 +27,22 @@ class Style{
         if($is_mobile_request){
             //手机端
             $qcodeHtml.="<a style=\"display:inline-block;\" href=\"javascript:;\" onclick=\"CopyContentTxt('short_url_id')\">复制短链</a>";
-            $qcodeHtml.="<a style=\"display:none;\" tgurl=\"".$short_url."\"  href=\"javascript:;\" id=\"copy_btn_short_url\">复制短链</a>";
+            //$qcodeHtml.="<a style=\"display:none;\" tgurl=\"".$short_url."\"  href=\"javascript:;\" id=\"copy_btn_short_url\">复制短链</a>";
         }else{
             //pc端
-            $qcodeHtml.="<a style=\"display:none;\" href=\"javascript:;\" onclick=\"CopyContentTxt('short_url_id')\">复制短链</a>";
-            $qcodeHtml.="<a style=\"display:inline-block;\" tgurl=\"".$short_url."\"  href=\"javascript:;\" id=\"copy_btn_short_url\">复制短链</a>";
+            $qcodeHtml.="<a style=\"display:inline-block;\" href=\"javascript:;\" onclick=\"CopyContentTxt('short_url_id')\">复制短链</a>";
+            //$qcodeHtml.="<a style=\"display:inline-block;\" tgurl=\"".$short_url."\"  href=\"javascript:;\" id=\"copy_btn_short_url\">复制短链</a>";
         }
         $qcodeHtml.="<p id=\"source_url_id\" style=\"padding: 15px 0 10px;\">".$promuser_source_url."</p>";
         //判断是否手机端访问，因为手机端和pc端使用的原链复制功能是不同的，由李鹏飞于2017-03-01添加
         if($is_mobile_request){
             //手机端
             $qcodeHtml.="<a style=\"display:inline-block;\" href=\"javascript:;\" onclick=\"CopyContentTxt('source_url_id')\">复制原链</a>";
-            $qcodeHtml.="<a style=\"display:none;\" tgurl=\"".$promuser_source_url."\"  href=\"javascript:;\" id=\"copy_btn\">复制原链</a>";
+            //$qcodeHtml.="<a style=\"display:none;\" tgurl=\"".$promuser_source_url."\"  href=\"javascript:;\" id=\"copy_btn\">复制原链</a>";
         }else{
             //pc端
-            $qcodeHtml.="<a style=\"display:none;\" href=\"javascript:;\" onclick=\"CopyContentTxt('source_url_id')\">复制原链</a>";
-            $qcodeHtml.="<a style=\"display:inline-block;\" tgurl=\"".$promuser_source_url."\"  href=\"javascript:;\" id=\"copy_btn\">复制原链</a>";
+            $qcodeHtml.="<a style=\"display:inline-block;\" href=\"javascript:;\" onclick=\"CopyContentTxt('source_url_id')\">复制原链</a>";
+            //$qcodeHtml.="<a style=\"display:inline-block;\" tgurl=\"".$promuser_source_url."\"  href=\"javascript:;\" id=\"copy_btn\">复制原链</a>";
         }
         $qcodeHtml.="&#12288;&#12288;&#12288;&#12288;<a style=\"display:inline-block;\" href=\"https://market.x7sy.com/help/xr\" target=\"_blank\">如何信任开发者</a>";
         $qcodeHtml.="&#12288;&#12288;&#12288;&#12288;<a style=\"display:inline-block;\" href=".ReturnAndroidIOSMarketUrl($promuser_id,1)." target=\"_blank\">获取IOS推广包</a>";
